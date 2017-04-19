@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{{ title }}</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/app.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+    <!-- Pie Chart / Skills -->
+    <script type="text/javascript" src="/js/template/jquery-2.0.3.min.js"></script>
+    <!-- Send Email -->
+    <script type="text/javascript" src="/js/template/sendemail.js"></script>
+    <!-- Progressbar / Skills-->
+    <script type="text/javascript" src="/js/template/progressbar.js"></script>
+    <!-- Portfolio-->
+    <script src="/js/template/modernizr.custom.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    {% if ENV_DEVELOPMENT %}
+      <script src="http://localhost:35729/livereload.js"></script>
+    {% endif %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="/js/bundle.js"></script>
+    <!-- endinject -->
+    <script type="text/javascript" src="/js/template/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/template/head.min.js"></script>
+    <!-- Portfolio Thumbnail -->
+    <script type="text/javascript" src="/js/template/imagesloaded.min.js"></script>
+    <script type="text/javascript" src="/js/template/masonry.min.js"></script>
+    <script type="text/javascript" src="/js/template/class_helper.js"></script>
+    <script type="text/javascript" src="/js/template/grid_gallery.js"></script>
+    <!-- Portfolio Grid -->
+    <script>
+      new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+    </script>
+    <!-- Portfolio Slider-->
+    <script type="text/javascript"  src="/js/template/carousel.js"></script>
+    <script type="text/javascript" src="/js/template/jquery.easypiechart.js"></script>
+    <script type="text/javascript" src="/js/template/text.rotator.js"></script>
+    <!-- Page Scrolling -->
+    <script>
+      head.js(
+        { mousewheel : "/js/template/jquery.mousewheel.js" },
+        { mwheelIntent : "/js/template/mwheelIntent.js" },
+        { jScrollPane : "/js/template/jquery.jscrollpane.min.js" },
+        { history : "/js/template/jquery.history.js" },
+        { stringLib : "/js/template/core.string.js" },
+        { easing : "/js/template/jquery.easing.1.3.js" },
+        { smartresize : "/js/template/jquery.smartresize.js" },
+        { page : "/js/template/jquery.page.js" }
+      );
+    </script>
+    <!-- Fit Video -->
+    <script type="text/javascript"  src="/js/template/jquery.fitvids.js"></script>
+    <!-- All Javascript Component-->
+    <script src="/js/template/settings.js"></script>
+  </body>
+</html>

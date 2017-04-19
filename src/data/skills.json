@@ -1,0 +1,54 @@
+{
+  "skills": {
+    "depiction": "",
+    "lists": [
+      {
+        "name": "HTML<br/>CSS",
+        "percentage": 90,
+        "years": 6
+      }, {
+        "name": "Frontend<br/>Development",
+        "percentage": 90,
+        "years": 6
+      }, {
+        "name": "Web<br/>Design",
+        "percentage": 75,
+        "years": 10
+      }, {
+        "name": "UI/UX",
+        "percentage": 40,
+        "years": 1
+      }
+    ]
+  },
+  "knowledge": {
+    "depiction": "",
+    "lists": [
+      "jQuery",
+      "Angular.js",
+      "React.js",
+      "Redux.js",
+      "VUE2.js",
+      "NODE.js",
+      "Express.js",
+      "Webpack",
+      "Gulp",
+      "SASS / SCSS",
+      "RWD",
+      "Canvas",
+      "SVG"
+    ]
+  },
+  "language": {
+    "depiction": "",
+    "lists": [
+      {
+        "name": "Chinese",
+        "percentage": 90
+      }, {
+        "name": "English",
+        "percentage": 35
+      }
+    ]
+  }
+}

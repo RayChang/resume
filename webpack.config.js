@@ -1,4 +1,5 @@
 var path = require('path');
+var Webpack = require('webpack');
 
 module.exports = {
   context: path.resolve('src'),
@@ -37,5 +38,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss']
-  }
+  },
+  plugins: [
+    new Webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    })
+  ]
 }

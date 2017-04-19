@@ -10,7 +10,6 @@ import ContentScroller from '../component/ContentScroller.jsx';
 class App extends Component {
   constructor(props) {
     super(props);
-    console.log(props)
   };
   static propTypes = {
     home: React.PropTypes.object.isRequired,

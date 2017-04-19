@@ -70,12 +70,15 @@ app.use(function(req, res, next) {
 
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    console.log(err.message)
-    res.render('error', {
-        title: 'Ray Chang - Resume | error',
-        message: err.message,
-        error: app.get('env') === 'development' ? err : {}
-    });
+    if(err.status === 404) {
+      res.render('error', {
+          title: 'Ray Chang - Resume | error',
+          message: err.message,
+          error: app.get('env') === 'development' ? err : {}
+      });
+    } else {
+      res.send(err.message)
+    }
 });
 
 

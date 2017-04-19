@@ -21,7 +21,7 @@ class About extends Component {
             </ul>
             <h3>Professional Profile</h3>
             <p dangerouslySetInnerHTML={{__html: this.state.introuction}}></p>
-            <a href={this.state.cv} className="button">Download resume as PDF format</a>
+            <a href={this.state.cv} className="button" download>Download resume as PDF format</a>
           </div>
         </div>
       </article>

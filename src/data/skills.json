@@ -25,18 +25,20 @@
     "depiction": "",
     "lists": [
       "jQuery",
-      "Angular.js",
-      "React.js",
-      "Redux.js",
-      "VUE2.js",
-      "NODE.js",
-      "Express.js",
+      "Angular",
+      "React",
+      "Redux",
+      "VUE2",
+      "NODE",
+      "Express",
       "Webpack",
       "Gulp",
       "SASS / SCSS",
       "RWD",
       "Canvas",
-      "SVG"
+      "SVG",
+      "Wordpress",
+      "Mongodb"
     ]
   },
   "language": {

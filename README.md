@@ -1,5 +1,5 @@
 # Resume
-需要建立 config.js
+需要建立 config.js，並存放在根目錄下
 ```js
 module.exports = {
   connectName: 'xxxx', // session cookie name

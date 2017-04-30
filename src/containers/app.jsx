@@ -6,7 +6,6 @@ import * as actions from '../actions';
 import MainMenu from '../component/MainMenu.jsx';
 import ToTop from '../component/ToTop.jsx';
 import ContentScroller from '../component/ContentScroller.jsx';
-
 class App extends Component {
   static propTypes = {
     home: React.PropTypes.object.isRequired,
@@ -19,6 +18,9 @@ class App extends Component {
     lang: React.PropTypes.string.isRequired,
     actions: React.PropTypes.object.isRequired
   };
+  componentDidUpdate(prevProps, prevState) {
+    window.resetCustomScroll()
+  }
   render() {
     const { lang, actions } = this.props;
     return (

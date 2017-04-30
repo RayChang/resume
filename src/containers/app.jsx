@@ -21,7 +21,6 @@ class App extends Component {
   };
   render() {
     const { lang, actions } = this.props;
-    console.log(lang)
     return (
       <div id="container" className="container">
         <MainMenu setLang={actions.setLang} lang={lang}></MainMenu>

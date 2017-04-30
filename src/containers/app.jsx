@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 // import * as TodoActions from '../actions';
 
 import MainMenu from '../component/MainMenu.jsx';

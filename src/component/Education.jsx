@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 
 class Education extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ...props.data
-    }
-  }
   render() {
+    const { schools } = this.props.data;
     return (
       <article className="content education gray-bg" id="chaptereducation">
         <div className="inner">
@@ -18,7 +13,7 @@ class Education extends Component {
               <div className="full-divider"></div>
               <div className="row">
                 {
-                  this.state.schools.map((school, index) => (
+                  schools.map((school, index) => (
                   <div key={index} className="education-details">
                     <div className="col-12 margin-bottom50 margin-top50">
                       <div className="flot-left">

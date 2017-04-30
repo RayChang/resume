@@ -8,6 +8,7 @@ import reducer from './reducers'
 
 const store = createStore(reducer);
 const root = document.getElementById('root');
+store.dispatch({type: 'SET_LANG', lang: root.dataset.lang});
 if(root) {
   render(
     <Provider store={store}>

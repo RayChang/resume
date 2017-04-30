@@ -7,6 +7,15 @@ import education from './Education';
 import portfolio from './Portfolio';
 import contact from './Contact'
 
+const lang = function(state = 'en', action) {
+  switch(action.type) {
+    case 'SET_LANG':
+      return state = (action.lang === 'false' || !action.lang) ? 'en' : action.lang;
+    default:
+      return state;
+  }
+}
+
 const rootReducer = combineReducers({
   home,
   about,
@@ -14,7 +23,8 @@ const rootReducer = combineReducers({
   experience,
   education,
   portfolio,
-  contact
+  contact,
+  lang
 })
 
 export default rootReducer

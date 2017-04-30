@@ -2,11 +2,8 @@
 import React, { Component } from 'react';
 
 class MainMenu extends Component {
-  constructor(props) {
-    super(props);
-  };
-
   render() {
+    const { lang, setLang } = this.props;
     return (
       <aside className="menu" id="menu">
         <div className="logo">
@@ -37,6 +34,10 @@ class MainMenu extends Component {
             <span id="link_contact">Contact</span>
           </a>
         </nav>
+        <div className="social">
+          <span className={(() => lang === 'zh-TW' ? 'active' : '')()} onClick={() => setLang('zh-TW')}>中文</span>
+          <span className={(() => lang === 'en' ? 'active' : '')()} onClick={() => setLang('en')}>English</span>
+        </div>
       </aside>
     )
   };

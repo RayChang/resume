@@ -52,6 +52,10 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res, next) => {
+  req.lang = req.acceptsLanguages('zh-TW', 'es', 'en');
+  next();
+});
 app.use('/', routes);
 app.use('/messages', messages);
 app.use('/contact', contact);

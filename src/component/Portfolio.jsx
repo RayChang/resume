@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ...props.data
-    };
-  }
   slideImage(cover, length) {
     let index = cover.indexOf('.'),
         slide = [];
@@ -22,6 +16,7 @@ class Portfolio extends Component {
     }
   }
   render() {
+    const { data, lang } = this.props;
     return (
       <article className="content portfolio white-bg" id="chapterportfolio">
         <div className="inner">
@@ -34,7 +29,7 @@ class Portfolio extends Component {
                   <section className="grid-wrap">
                     <ul className="grid">
                       {
-                        this.state.protfolios.map((protfolio, index) => (
+                        data.protfolios.map((protfolio, index) => (
                           <li key={index}>
                             <figure>
                               <img src={protfolio.cover} alt=""/>
@@ -55,7 +50,7 @@ class Portfolio extends Component {
                   <section className="slideshow">
                     <ul>
                       {
-                        this.state.protfolios.map((protfolio, index) => (
+                        data.protfolios.map((protfolio, index) => (
                           <li key={index}>
                             <figure>
                               <figcaption>
@@ -66,7 +61,7 @@ class Portfolio extends Component {
                                   </a>
                                 </h3>
                                 <span>{protfolio.info}</span>
-                                <p>{protfolio.depiction}</p>
+                                <p>{protfolio.depiction[lang]}</p>
                               </figcaption>
                               <div id={"owl-demo" + (index + 1)} className="owl-carousel">
                                 {this.slideImage(protfolio.cover, protfolio.slideImage)}

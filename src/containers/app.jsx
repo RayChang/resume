@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-// import * as TodoActions from '../actions';
-
+import * as actions from '../actions';
 import MainMenu from '../component/MainMenu.jsx';
 import ToTop from '../component/ToTop.jsx';
 import ContentScroller from '../component/ContentScroller.jsx';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  };
   static propTypes = {
     home: React.PropTypes.object.isRequired,
     about: React.PropTypes.object.isRequired,
@@ -19,12 +15,16 @@ class App extends Component {
     experience: React.PropTypes.object.isRequired,
     education: React.PropTypes.object.isRequired,
     portfolio: React.PropTypes.object.isRequired,
-    contact: React.PropTypes.object.isRequired
+    contact: React.PropTypes.object.isRequired,
+    lang: React.PropTypes.string.isRequired,
+    actions: React.PropTypes.object.isRequired
   };
   render() {
+    const { lang, actions } = this.props;
+    console.log(lang)
     return (
       <div id="container" className="container">
-        <MainMenu></MainMenu>
+        <MainMenu setLang={actions.setLang} lang={lang}></MainMenu>
         <ToTop></ToTop>
         <ContentScroller data={this.props}></ContentScroller>
       </div>
@@ -36,10 +36,11 @@ const mapStateToProps = state => ({
   ...state
 })
 
-// const mapDispatchToProps = dispatch => ({
-//     actions: bindActionCreators(TodoActions, dispatch)
-// })
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(actions, dispatch)
+})
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(App)

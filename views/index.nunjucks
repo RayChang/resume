@@ -1,5 +1,5 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-  <div id="root"></div>
+  <div id="root" data-lang="{{lang}}"></div>
 {% endblock %}

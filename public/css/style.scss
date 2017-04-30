@@ -430,16 +430,27 @@ h5 {
 .social {
     padding: 30px;
     position: absolute;
-    top: 619px;
+    top: 570px;
+    right: 0;
+    left: 0;
+    text-align: center;
 }
-.social a {
-    font-size: 20px;
+.social span {
+    text-align: center;
+    font-size: 10px;
     transition-duration: .2s;
     -moz-transition-duration: .2s;
     -webkit-transition-duration: .2s;
     -o-transition-duration: .2s;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 15px;
+    color: #808080;
+    &.active {
+      color: #fff;
+    }
 }
-.social a:hover {
+.social span:hover {
     color: #fff;
 }
 .social .facebook {

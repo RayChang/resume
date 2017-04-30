@@ -9,10 +9,6 @@ import Contact from './Contact';
 import Introduction from './Introduction';
 
 class ContentScroller extends Component {
-  constructor(props) {
-    super(props);
-  };
-
   render() {
     const {
       home,
@@ -21,18 +17,19 @@ class ContentScroller extends Component {
       experience,
       education,
       portfolio,
-      contact
+      contact,
+      lang
     } = this.props.data;
     return (
       <div className="content-scroller">
         <div className="content-wrapper">
-          <Home data={home}></Home>
-          <About data={about}></About>
-          <Skills data={skills}></Skills>
-          <Experience data={experience}></Experience>
-          <Education data={education}></Education>
-          <Portfolio data={portfolio}></Portfolio>
-          <Contact data={contact}></Contact>
+          <Home data={home} lang={lang}></Home>
+          <About data={about} lang={lang}></About>
+          <Skills data={skills} lang={lang}></Skills>
+          <Experience data={experience} lang={lang}></Experience>
+          <Education data={education} lang={lang}></Education>
+          <Portfolio data={portfolio} lang={lang}></Portfolio>
+          <Contact data={contact} lang={lang}></Contact>
           <Introduction></Introduction>
         </div>
       </div>
